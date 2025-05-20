@@ -1,0 +1,15 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input[type="text"], button {
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.02);
+}
+
+input[type="checkbox"]:checked + span {
+  font-weight: bold;
+}

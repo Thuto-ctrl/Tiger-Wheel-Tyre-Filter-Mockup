@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tiger Wheel & Tyre Mockup</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-white shadow-sm">
+    <div class="max-w-screen-xl mx-auto flex items-center justify-between p-4">
+      <img src="img/main-logo.svg" alt="Tiger Wheel & Tyre" class="h-10">
+      <nav class="space-x-4 text-sm text-gray-700">
+        <a href="#" class="hover:underline">Tyres</a>
+        <a href="#" class="hover:underline">Wheels</a>
+        <a href="#" class="hover:underline">Services</a>
+        <a href="#" class="hover:underline">Fitment</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main layout -->
+  <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 max-w-screen-xl mx-auto p-6">
+    <!-- Sidebar Filters -->
+    <aside class="space-y-6 overflow-y-auto max-h-[80vh] pr-2">
+      <div>
+    <h3 class="text-lg font-semibold">Tyre Size</h3>
+    <select id="tyre-size" class="border w-full p-2 mt-1">
+      <option value="">Select a size</option>
+      <option>155/60R15</option>
+      <option>155/65R14</option>
+      <option>155/70R14</option>
+      <option>165/60R14</option>
+      <option>165/65R14</option>
+      <option>165/70R14</option>
+      <option>165/80R13</option>
+      <option>175/55R15</option>
+      <option>175/65R14</option>
+      <option>175/65R15</option>
+      <option>175/70R13</option>
+      <option>175/70R14</option>
+    </select>
+  </div>
+
+  <div>
+    <h3 class="text-lg font-semibold">Vehicle Type</h3>
+    <div class="space-y-2 text-sm">
+      <label class="flex items-center"><input type="checkbox" class="mr-2"> 4x4</label>
+      <label class="flex items-center"><input type="checkbox" class="mr-2"> Light Truck</label>
+      <label class="flex items-center"><input type="checkbox" class="mr-2"> Passenger</label>
+      <label class="flex items-center"><input type="checkbox" class="mr-2"> SUV</label>
+    </div>
+  </div>
+
+      <div>
+        <h3 class="text-lg font-semibold">Brand</h3>
+  <div id="brand-list" class="space-y-2 text-sm">
+    <label class="flex items-center"><input type="checkbox" class="mr-2"> BFGoodrich</label>
+    <label class="flex items-center"><input type="checkbox" class="mr-2"> Bridgestone</label>
+    <label class="flex items-center"><input type="checkbox" class="mr-2"> Continental</label>
+    <label class="flex items-center"><input type="checkbox" class="mr-2"> Coopertires</label>
+    <div id="extra-brands" class="hidden">
+      <label class="flex items-center"><input type="checkbox" class="mr-2"> General Tire</label>
+      <label class="flex items-center"><input type="checkbox" class="mr-2"> Goodyear</label>
+      <label class="flex items-center"><input type="checkbox" class="mr-2"> GT Radial</label>
+      <label class="flex items-center"><input type="checkbox" class="mr-2"> Laufenn</label>
+      <label class="flex items-center"><input type="checkbox" class="mr-2"> Hankook</label>
+      <label class="flex items-center"><input type="checkbox" class="mr-2"> Pirelli</label>
+      <label class="flex items-center"><input type="checkbox" class="mr-2"> Rovelo</label>
+      <label class="flex items-center"><input type="checkbox" class="mr-2"> Velocity</label>
+      <label class="flex items-center"><input type="checkbox" class="mr-2"> Yokohama</label>
+    </div>
+    <button onclick="toggleBrands()" class="text-blue-600 text-sm mt-2">+ See More</button>
+  </div>
+</div>
+
+      <div>
+  <h3 class="text-lg font-semibold">Price Range (R)</h3>
+  <div class="flex items-center gap-2">
+    <label>R<span id="min-price">500-R5000</span></label>
+    <input type="range" id="price-min" min="0" max="10000" step="100" value="500" class="w-full">
+  </div>
+</div>
+
+      <label class="flex items-center"><input type="checkbox" class="mr-2"> RunFlat</label>
+      <button class="bg-red-300 px-4 py-2 rounded">Clear Filters</button>
+
+      <!-- Disclaimer -->
+<p class="text-xs text-gray-600 mt-6">
+  *Please Note:<br>
+  – Images displayed may differ from the actual product<br>
+  – Online prices may differ from in-store prices.
+</p>
+    </aside>
+
+    <!-- Product Grid -->
+    <main class="lg:col-span-3">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <!-- Product Card -->
+        <div class="bg-white p-4 border border-gray-200 hover:shadow-md">
+          <img src="img/Tyre.png" alt="Tyre" class="w-full h-32 object-contain mb-2">
+          <p class="text-sm text-gray-500">Continental</p>
+          <p class="font-bold text-md">PremiumContact 5</p>
+          <p class="text-red-600 font-semibold">R1,499.00</p>
+          <button class="w-full bg-red-600 text-white py-2 mt-3">Buy Now</button>
+          <button class="w-full border mt-2 py-2">Add to Wishlist</button>
+        </div>
+        <!-- Repeat 5 more -->
+        <div class="bg-white p-4 border border-gray-200 hover:shadow-md">
+          <img src="img/Tyre.png" alt="Tyre" class="w-full h-32 object-contain mb-2">
+          <p class="text-sm text-gray-500">Continental</p>
+          <p class="font-bold text-md">PremiumContact 5</p>
+          <p class="text-red-600 font-semibold">R1,499.00</p>
+          <button class="w-full bg-red-600 text-white py-2 mt-3">Buy Now</button>
+          <button class="w-full border mt-2 py-2">Add to Wishlist</button>
+        </div>
+        <div class="bg-white p-4 border border-gray-200 hover:shadow-md">
+          <img src="img/Tyre.png" alt="Tyre" class="w-full h-32 object-contain mb-2">
+          <p class="text-sm text-gray-500">Continental</p>
+          <p class="font-bold text-md">PremiumContact 5</p>
+          <p class="text-red-600 font-semibold">R1,499.00</p>
+          <button class="w-full bg-red-600 text-white py-2 mt-3">Buy Now</button>
+          <button class="w-full border mt-2 py-2">Add to Wishlist</button>
+        </div>
+        <div class="bg-white p-4 border border-gray-200 hover:shadow-md">
+          <img src="img/Tyre.png" alt="Tyre" class="w-full h-32 object-contain mb-2">
+          <p class="text-sm text-gray-500">Continental</p>
+          <p class="font-bold text-md">PremiumContact 5</p>
+          <p class="text-red-600 font-semibold">R1,499.00</p>
+          <button class="w-full bg-red-600 text-white py-2 mt-3">Buy Now</button>
+          <button class="w-full border mt-2 py-2">Add to Wishlist</button>
+        </div>
+        <div class="bg-white p-4 border border-gray-200 hover:shadow-md">
+          <img src="img/Tyre.png" alt="Tyre" class="w-full h-32 object-contain mb-2">
+          <p class="text-sm text-gray-500">Continental</p>
+          <p class="font-bold text-md">PremiumContact 5</p>
+          <p class="text-red-600 font-semibold">R1,499.00</p>
+          <button class="w-full bg-red-600 text-white py-2 mt-3">Buy Now</button>
+          <button class="w-full border mt-2 py-2">Add to Wishlist</button>
+        </div>
+        <div class="bg-white p-4 border border-gray-200 hover:shadow-md">
+          <img src="img/Tyre.png" alt="Tyre" class="w-full h-32 object-contain mb-2">
+          <p class="text-sm text-gray-500">Continental</p>
+          <p class="font-bold text-md">PremiumContact 5</p>
+          <p class="text-red-600 font-semibold">R1,499.00</p>
+          <button class="w-full bg-red-600 text-white py-2 mt-3">Buy Now</button>
+          <button class="w-full border mt-2 py-2">Add to Wishlist</button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white mt-10 py-6">
+    <div class="max-w-screen-xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 px-6 text-sm">
+      <div>
+        <h4 class="font-semibold mb-2">Products</h4>
+        <ul><li>Tyres</li><li>Wheels</li><li>Batteries</li></ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-2">Services</h4>
+        <ul><li>Fitment</li><li>Wheel Alignment</li><li>Repairs</li></ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-2">Company</h4>
+        <ul><li>About Us</li><li>Store Locator</li><li>Contact</li></ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-2">Connect</h4>
+        <ul><li>Facebook</li><li>Instagram</li><li>YouTube</li></ul>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+
+</body>
+</html>
+
